@@ -47,8 +47,13 @@ var socks_server = socks.createServer(function(socket, port, address, proxy_read
   }
 });
 
-
+try{
 socks_server.listen(PORT, HOST);
+}
+catch(er)
+{
+    console.log('server err ', er);
+}
 
 // vim: set filetype=javascript syntax=javascript :
 

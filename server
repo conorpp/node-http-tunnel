@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+console.log("works");
 var http = require('http');
 var net = require('net');
 var b64 = require('./lib/base64stream');
@@ -16,5 +17,6 @@ var s = tunnel.createServer(function() {
   //console.log('Someone connected!');
 });
 
+console.log('listening on '+tunnel_port);
 s.listen(tunnel_port);
 
